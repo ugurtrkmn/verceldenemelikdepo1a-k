@@ -43,3 +43,21 @@ bot.onText(/\start/, (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, 'Hoşgeldin yeni dünyanın kapılarını aralamaya!');
 });
+
+const keyboard = {
+    inline_keyboard: [
+        [
+            {
+                text: "Open Web App",
+                web_app: {
+                    url: "https://verceldenemelikdepo1a-k.vercel.app"
+                }
+            }
+        ]
+    ]
+};
+
+//telegram bot api ye istek atarken bu nesne kullanılabilir
+bot.sendMessage(chatId, "Click the button below to open the Web App ben yazdım", {
+    reply_markup: keyboard
+});
