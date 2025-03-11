@@ -33,3 +33,13 @@ function closePollModal() {
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('pollmodal').style.display = 'none';
 });
+
+const TelegramBot = require('node-telegram-bot-api');
+
+const token = '7025285706:AAHksxqSvkqq0JOnj8H5y2EM5uPWmBGyxbc';
+const bot = new TelegramBot(token, {polling: true});
+
+bot.onText(/\start/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, 'Hoşgeldin yeni dünyanın kapılarını aralamaya!');
+});
