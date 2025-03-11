@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu-1">
+            <div class="profileContainer">
+                <img id="profilPic" src="" alt="Profile picture loading">
+                <p id="userpoints">Points: 0</p>
+            </div>
+        </div>
+        <div class="menu" id="menu-2">
+            <div class="pollcontainer">
+                <textarea name="" id="pooltext" cols="30" rows="10"></textarea>
+                <button id="sumbitpoll">Share poll</button>
+            </div>
+            <div class="polllist">
+                <div class="pollbox" onclick="openPollModal('This is a sample poll question. It might be long or short, but the box size remains the same.')">
+                    Sample Poll 1 
+                </div>
+                <div class="pollbox" onclick="openPollModal('Another example poll with a different lenght of text.')">
+                    Sample Poll 2                             
+                </div>
+            </div>
+            <div id="pollmodal" class="modal">
+                <div class="modalcontent">
+                    <span class="closebtn" onclick="closePollModal()">&times;</span>
+                    <p id="pollfulltext"></p>
+                </div>
+            </div>
+        </div>
+        <!-- açılır pencere modal yukarıdaki-->
+        
+
+
+
+        <div class="menu" id="menu-3"></div>
+
+        <div class="menu-navigation">
+            <button class="nav-btn" id="menu-1btn"></button>
+            <button class="nav-btn" id="menu-2btn"></button>
+            <button class="nav-btn" id="menu-3btn"></button>
+        </div>
+    </div>
+    <script src="richbag.js"></script>
+    <script src="package.json"></script>
+</body>
+</html>
